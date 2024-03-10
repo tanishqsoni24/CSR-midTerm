@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d-flex{
+            display: flex;
+        }
+
+        .justify-content-around{
+            justify-content: space-around;
+        }
+
+        .inner-cont{
+            box-shadow: 0px 0px 10px black;
+            padding: 1rem ;
+        }
+
+
+        .inner-cont:hover{
+            background: aliceblue;
+            cursor: pointer;
+        }
+
+        .container{
+            margin-top: 2rem;
+        }
+
+        .text-center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="createUser(event)">
+        <input type="text" id="name" required>
+        <input type="text" id="age" required>
+        <input type="text" id="place" required>
+        <input type="submit" value="Submit">
+    </form>
+    <h2 class="text-center">Users</h2>
+    <div class="container d-flex justify-content-around" id="container"></div>
+    <form onsubmit="updateUserDetails(event)">
+        <input type="text" id="updateName" required>
+        <input type="text" id="updateAge" required>
+        <input type="text" id="updatePlace" required>
+        <input type="hidden" id="hidden">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+<script src="./script.js"></script>
+</html>
